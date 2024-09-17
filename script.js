@@ -1,6 +1,7 @@
 const navbar = document.querySelector('header')
 const links = document.querySelectorAll('.linky')
 
+
 window.onscroll=function(){
     let top = window.scrollY
     if(top > 480){
@@ -12,7 +13,7 @@ window.onscroll=function(){
     }else{
         navbar.classList.remove('active')
         links.forEach((link) => {
-            link.style.color = "#ffffff";
+            link.style.color = "#202020";
         });
         
         

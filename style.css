@@ -11,17 +11,30 @@
         --timetable: #8ec7e1; 
         --tourgether: #facf79;
         --moviematch: #ffc0a3;
+        --beeraucrat: #747474;
+        --darkgrey: #1e1e1e;
         --black: rgb(32, 32, 32)
+         
 }
 
 p, li{
-    font-family: "Work Sans" ,"Avenir";
+    font-family: "Be Vietnam Pro","Work Sans" ,"Avenir";
     font-size: 20px;
 }
 
 h4{
-    font-family: "Work Sans" ,"Avenir";
+    font-family: "Be Vietnam Pro", "Work Sans" ,"Avenir";
     font-size: 24px;
+}
+
+.linky{
+    text-decoration: none;
+    color: black;
+    font-family:  "Be Vietnam Pro", "Work Sans" , "Avenir";
+}
+
+.serif{
+    font-family: "Be Vietnam Pro",'Charter';
 }
 
 /*
@@ -42,9 +55,20 @@ a{
     color: black;
 }
 
-.serif{
-    font-family: 'Charter';
-}
+.mark {
+    margin: 0 -0.4em;
+    padding: 0.1em 0.4em;
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 0, 212, 0.1),
+      rgba(255, 80, 159, 0.7) 4%,
+      rgba(255, 0, 179, 0.3)
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
 
 body{
     position: relative;
@@ -80,12 +104,6 @@ header a:hover {
     text-decoration: underline;
 } 
 
-.linky{
-    text-decoration: none;
-    color: white;
-    font-family:  "Work Sans" , "Avenir";
-}
-
 
 #name {
     grid-area: name;
@@ -114,7 +132,7 @@ header a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: center;
     width: 100%;
     height: 500px;
     z-index: 1;
@@ -123,7 +141,7 @@ header a:hover {
 
 .landingHeadLine{
     margin: 30px 30px 30px 30px;
-    color: white;
+    color: black;
 }
 
 
@@ -170,7 +188,7 @@ header a:hover {
 }
 
 .section-header{
-    font-family: "Charter";
+    font-family: "Be Vietnam Pro","Charter";
     font-size: 100px;
     margin: 0px;
     color: rgb(32, 32, 32);
@@ -183,16 +201,20 @@ header a:hover {
     flex-flow: row wrap;
 }
 
+ /* this is a nested grid item for my casestudies, meaning the item is also the container for the image-item and the descrip item*/
 .grid-item{
     padding: 30px 50px 60px;
     min-height: 500px;
+    max-height: 700px;
     min-width: 300px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    
     display:flex;
-    flex: 50%;
-    flex-direction: column;
+    flex: 100%;
+    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
     text-align: center;
     text-decoration: none;
@@ -218,6 +240,56 @@ header a:hover {
 }
 
 
+.thumbnail {
+    max-width: 500px;
+    min-width: 0;
+    height: auto;
+    object-fit: contain;
+    
+    width: 50%;
+    background:rgba(208, 125, 125, 0.8);
+}
+
+/* one of the flex items, also flex container for text it holds*/
+.project-intro-item {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    color: var(--darkgrey);
+
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+}
+
+.imgTitle{
+    font-size: 64px;
+    font-weight: bolder;
+    font-family: "Be Vietnam Pro",'Charter';
+    letter-spacing: 0.001em;
+    margin-bottom: -0.5rem;
+    
+}
+
+.imgDescrip{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.imgRole {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Be Vietnam Pro",'Work Sans';
+    letter-spacing: 0.001em;
+
+}
+
 #adelina{
     background-color: var(--adelina);
 }
@@ -230,34 +302,11 @@ header a:hover {
 #moviematch{
     background-color: var(--moviematch);
 }
-
-.imgOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:rgba(0, 0, 0, 0.8);
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.25s;
-    text-align: left;
-
+#beeraucrat{
+    background-color: var(--beeraucrat);
 }
 
-.imgOverlay:hover{
-    opacity: 1;
-}
 
-.imgTitle{
-    font-size: 30px;
-    font-family: 'Charter';
-    letter-spacing: 0.05em;
-}
 
 /* FOOTER STUFF*/
 
@@ -334,7 +383,7 @@ footer{
 }
 
 .textcenter{
-    
+    flex: 1 1 auto;
     align-self: center;
     margin-left: 5em;
     margin-right: 5em;
@@ -404,7 +453,7 @@ footer{
     box-shadow: 0 0 20px #eee;
     border-radius: 5px;
     /*display: block; */
-    font-family: "Work Sans" ,"Avenir";
+    font-family: "Be Vietnam Pro","Work Sans" ,"Avenir";
     font-size: 30px;
   }
 
@@ -420,7 +469,7 @@ footer{
  
     border-radius: 5px;
     display: block; 
-    font-family: "Work Sans" ,"Avenir";
+    font-family: "Be Vietnam Pro","Work Sans" ,"Avenir";
     font-size: 20px;
   }
 
@@ -436,7 +485,7 @@ footer{
  
     border-radius: 5px;
     display: block; 
-    font-family: "Work Sans" ,"Avenir";
+    font-family: "Be Vietnam Pro","Work Sans" ,"Avenir";
     font-size: 20px;
   }
 
