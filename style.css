@@ -19,12 +19,19 @@
 
 p, li{
     font-family: "Be Vietnam Pro","Work Sans" ,"Avenir";
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 h4{
     font-family: "Be Vietnam Pro", "Work Sans" ,"Avenir";
-    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+h3{
+    font-family: "Be Vietnam Pro", "Work Sans" ,"Avenir";
+    font-size: 1.75rem;
+    font-weight: 500;
 }
 
 .linky{
@@ -247,7 +254,7 @@ header a:hover {
     object-fit: contain;
     
     width: 50%;
-    background:rgba(208, 125, 125, 0.8);
+    
 }
 
 /* one of the flex items, also flex container for text it holds*/
@@ -269,8 +276,8 @@ header a:hover {
 }
 
 .imgTitle{
-    font-size: 64px;
-    font-weight: bolder;
+    font-size: clamp(2rem, 3.636vw + 1.273rem, 4rem);
+    font-weight: 600;
     font-family: "Be Vietnam Pro",'Charter';
     letter-spacing: 0.001em;
     margin-bottom: -0.5rem;
@@ -278,13 +285,13 @@ header a:hover {
 }
 
 .imgDescrip{
-    font-size: 24px;
+    font-size: clamp(0.75rem, 1.364vw + 0.477rem, 1.5rem);
     font-weight: 500;
 }
 
 .imgRole {
-    font-size: 20px;
-    font-weight: 300;
+    font-size: clamp(0.75rem, 0.909vw + 0.568rem, 1.25rem);
+    font-weight: 400;
     font-family: "Be Vietnam Pro",'Work Sans';
     letter-spacing: 0.001em;
 
@@ -325,7 +332,7 @@ footer{
 }
 
 .mini{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 /* CONTACT ME STUFF*/
@@ -363,6 +370,7 @@ footer{
     gap: 50px;
 }
 
+/*this is the flex container for the entire page*/
 .showcase{
     display: flex;
     flex-direction: column;
@@ -375,6 +383,7 @@ footer{
 
 }
 
+/*this is the flex container colorful container up top*/
 .showcaseDescription{
     display: flex;
     justify-content: center;
@@ -383,11 +392,48 @@ footer{
 }
 
 .textcenter{
+    display: flex;
+    flex-direction: column;
     flex: 1 1 auto;
     align-self: center;
     margin-left: 5em;
     margin-right: 5em;
 }
+
+/*ELEMENTS OF THE SHOWCASE*/
+
+.quote{
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.headline {
+    position: relative;
+    /*margin-left: 2em;  Space for the icon */
+}
+
+.icon {
+    position: absolute;
+    left: -2em; /* Move the icon to the left */
+    top: 0;
+    width: 1.5em; /* Adjust the size */
+    height: 1.5em;
+    background: url('https://img.icons8.com/?size=100&id=122963&format=png&color=000000') no-repeat;
+    background-size: contain;
+}
+
+
+.boxed{
+    border: 1px solid #ff76cd;
+    padding: 20px; /* Add padding to the inside of the border */
+    margin: 20px; /* Add margin to the outside of the border */
+    background-color: #fdeef8; /* Fill color of the box */
+    border-radius: 15px; 
+  }
 
 .btnNext{
     padding: 20px;
@@ -409,7 +455,7 @@ footer{
 .btn-1{
     text-decoration: none;
     color:black;
-    font-size: 30px;
+    font-size: 2em;
     padding: 20px 50px;
     margin: 32px;    
 }
@@ -454,7 +500,7 @@ footer{
     border-radius: 5px;
     /*display: block; */
     font-family: "Be Vietnam Pro","Work Sans" ,"Avenir";
-    font-size: 30px;
+    font-size: 2em;
   }
 
   .btn-filled-ade {
