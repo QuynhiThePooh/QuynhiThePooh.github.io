@@ -11,7 +11,7 @@
         --timetable: #8ec7e1; 
         --tourgether: #facf79;
         --moviematch: #ffc0a3;
-        --beeraucrat: #747474;
+        --beeraucrat: #b9b9b2;
         --darkgrey: #1e1e1e;
         --black: rgb(32, 32, 32)
          
@@ -32,6 +32,14 @@ h3{
     font-family: "Be Vietnam Pro", "Work Sans" ,"Avenir";
     font-size: 1.75rem;
     font-weight: 500;
+}
+
+h2{
+    font-family: "Be Vietnam Pro", "Work Sans" ,"Avenir";
+
+    font-weight: 700;
+    margin: 0 0 0 0;
+    font-size: clamp(32px, 3vw + 1rem, 52px);
 }
 
 .linky{
@@ -94,7 +102,7 @@ header{
     grid-template-areas: "name . work about contact";
     /*background-color: var(--white);*/
     position: fixed;  /*Set the navbar to fixed position */
-    /*z-index: 4;*/
+    z-index: 4;
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     transition: all 0.25s;
@@ -309,7 +317,7 @@ header a:hover {
 #moviematch{
     background-color: var(--moviematch);
 }
-#beeraucrat{
+#bee{
     background-color: var(--beeraucrat);
 }
 
@@ -327,8 +335,11 @@ footer{
     */
 
     display: flex;
+
     justify-content: center;
+    text-align: center;
     padding: 5px;
+
 }
 
 .mini{
