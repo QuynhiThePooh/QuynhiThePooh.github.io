@@ -198,13 +198,13 @@ header a:hover {
     max-width: 100%;
     overflow: hidden;
     box-sizing: border-box;
-    margin: 240px auto 0;
+    margin: 140px auto 0;
     padding: 40px;
 }
 
 .section-header{
     font-family: "Be Vietnam Pro","Charter";
-    font-size: 100px;
+    font-size: clamp(64px, 6vw + 1rem, 100px);
     margin: 0px;
     color: rgb(32, 32, 32);
     flex: 1 100%;
@@ -214,13 +214,15 @@ header a:hover {
 .grid-container{
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;       /* Center the items if they don’t take up the full width */
+    align-items: center;  
 }
 
  /* this is a nested grid item for my casestudies, meaning the item is also the container for the image-item and the descrip item*/
 .grid-item{
     padding: 30px 50px 60px;
-    min-height: 500px;
-    max-height: 700px;
+    min-height: 33vh;
+    max-height: 600px;
     min-width: 300px;
     box-sizing: border-box;
     position: relative;
@@ -228,12 +230,12 @@ header a:hover {
     
     display:flex;
     flex: 100%;
-    flex-direction: row;
     flex-flow: row wrap;
     justify-content: center;
     text-align: center;
     text-decoration: none;
     color: #fff;
+    border-radius: 40px;
 
 }
 
@@ -251,17 +253,17 @@ header a:hover {
     text-align: center;
     text-decoration: none;
     color: #fff;
+    z-index: 1;
 
 }
 
 
 .thumbnail {
-    max-width: 500px;
-    min-width: 0;
+    flex: 1 1 200px;
     height: auto;
     object-fit: contain;
-    
     width: 50%;
+    max-height: 500px;
     
 }
 
@@ -271,7 +273,7 @@ header a:hover {
     top: 0;
     left: 0;
     width: 50%;
-    height: 100%;
+    height: auto;
     color: var(--darkgrey);
 
     display: flex;
@@ -302,6 +304,10 @@ header a:hover {
     font-weight: 400;
     font-family: "Be Vietnam Pro",'Work Sans';
     letter-spacing: 0.001em;
+
+}
+
+.overlay{
 
 }
 
@@ -398,8 +404,8 @@ footer{
 .showcaseDescription{
     display: flex;
     justify-content: center;
-    height: 500px;
-    padding: 0px;
+    height: auto;
+    padding: 50px;
 }
 
 .textcenter{
@@ -407,6 +413,7 @@ footer{
     flex-direction: column;
     flex: 1 1 auto;
     align-self: center;
+    justify-content: center;
     margin-left: 5em;
     margin-right: 5em;
 }
