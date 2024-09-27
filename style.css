@@ -17,9 +17,26 @@
          
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0 auto;
+    flex-direction: column;
+}
+   
+main {
+    min-height: 5em;
+    flex: 1;
+}
 p, li{
     font-family: "Be Vietnam Pro","Work Sans" ,"Avenir";
-    font-size: 1.25rem;
+    font-size: 1.20rem;
+    line-height: 150%;
+    color: #3a3a3a;
+}
+
+ul{
+    line-height: 150%;
 }
 
 h4{
@@ -32,6 +49,7 @@ h3{
     font-family: "Be Vietnam Pro", "Work Sans" ,"Avenir";
     font-size: 1.75rem;
     font-weight: 500;
+
 }
 
 h2{
@@ -77,9 +95,9 @@ a{
     background: transparent;
     background-image: linear-gradient(
       to right,
-      rgba(255, 0, 212, 0.1),
-      rgba(255, 80, 159, 0.7) 4%,
-      rgba(255, 0, 179, 0.3)
+      rgba(255, 0, 195, 0.1),
+      rgba(253, 100, 185, 0.7) 4%,
+      rgba(255, 0, 132, 0.3)
     );
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -367,7 +385,7 @@ footer{
 
 .showcasepics{
     width: auto;
-    max-width: 1000px;
+    max-width: 900px;
     min-width: 0;
     margin-top: 40px;
     margin-bottom: 40px; 
@@ -392,7 +410,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 800px; /* omg max width not width so it responsive*/
+    max-width: 950px; /* omg max width not width so it responsive*/
     min-width: 0; /* do this so it can shrink*/
     margin: auto;
     margin-top: 50px;
@@ -431,6 +449,7 @@ footer{
 
 .headline {
     position: relative;
+    margin-top: 50px;
     /*margin-left: 2em;  Space for the icon */
 }
 
@@ -440,16 +459,16 @@ footer{
     top: 0;
     width: 1.5em; /* Adjust the size */
     height: 1.5em;
-    background: url('https://img.icons8.com/?size=100&id=122963&format=png&color=000000') no-repeat;
+    background: url('/pictures/stern.png') no-repeat;
     background-size: contain;
 }
 
 
 .boxed{
-    border: 1px solid #ff76cd;
+    border: 2px solid #ffd676;
     padding: 20px; /* Add padding to the inside of the border */
-    margin: 20px; /* Add margin to the outside of the border */
-    background-color: #fdeef8; /* Fill color of the box */
+    margin: 0px; /* Add margin to the outside of the border */
+    background-color: #fffefb; /* Fill color of the box */
     border-radius: 15px; 
   }
 
