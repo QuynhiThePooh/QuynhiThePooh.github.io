@@ -234,6 +234,7 @@ header a:hover {
     flex-flow: row wrap;
     justify-content: center;       /* Center the items if they don’t take up the full width */
     align-items: center;  
+    gap: 30px;
 }
 
  /* this is a nested grid item for my casestudies, meaning the item is also the container for the image-item and the descrip item*/
