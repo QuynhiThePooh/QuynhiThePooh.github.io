@@ -22,18 +22,29 @@
     <main>
         <div> <!--If i do a background color it would go here-->
         <header class="navbar">
-           
-            <a class="linky" href="#landing" id="name">Quynh Anh Nguyen</a>
-            <a class="linky" href="#mywork" id="work">Work</a>
-            <a class="linky" href="/aboutme.html" id="about">About</a>
-            <a class="linky" href="#contactme" id="contact">Contact</a>
-           
+           <nav>
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">
+              <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+            <label id="overlay" for="sidebar-active"></label>
+
+            <div class="links-container">
+              <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+              </label>
+                <a class="linky home-link" href="#landing" id="name">Quynh Anh Nguyen</a>
+                <a class="linky" href="#mywork" id="work">Work</a>
+                <a class="linky" href="/aboutme.html" id="about">About</a>
+                <a class="linky" href="#contactme" id="contact">Contact</a>
+            </div>
+           </nav>
         </header>
         <div id="landing"> 
             <div class="landingHeadLine">
-                <p class="serif"style="font-size: clamp(64px, 7vw + 1rem, 100px);font-weight:bold; margin-top: 10px; margin-bottom: 0px">Hi I am Quỳnh 
+                <p class="serif"style="font-size: clamp(50px, 7vw + 1rem, 100px);font-weight:bold; margin-top: 10px; margin-bottom: 0px">Hi I am Quỳnh 
                 </p>
-                <p class="serif" style="font-size:clamp(38px, 4vw + 1rem, 50px); font-weight:bold; margin-top: 0px; margin-bottom: 15px">
+                <p class="serif" style="font-size:clamp(36px, 4vw + 1rem, 50px); font-weight:bold; margin-top: 0px; margin-bottom: 15px">
                     a UX / UI Designer 
                 </p>
                 
