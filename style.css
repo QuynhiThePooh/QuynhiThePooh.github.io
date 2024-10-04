@@ -21,9 +21,18 @@
 .cursor.gridhovered {
     transform: translate(-50%, -50%) scale(3);
     opacity: 1;
+    
+    background-image: url(/pictures/CursorIcon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cursor.linkhovered {
+    transform: translate(-50%, -50%) scale(3);
+    
 }
 
-/*
+/* mix-blend-mode: difference;
 #custom-cursor {
         position: fixed;
         top: 0;
@@ -149,7 +158,7 @@ nav{
         --moviematch: #ffc0a3;
         --beeraucrat: #b9b9b2;
         --darkgrey: #1e1e1e;
-        --pink:#ffb5e5; 
+        --pink:#E393AC; 
         --black: rgb(32, 32, 32)
 
          
@@ -160,7 +169,8 @@ body {
     min-height: 100vh;
     margin: 0 auto;
     flex-direction: column;
-    
+    cursor: none;
+    background-color: #fffdfa;
   
 }
    
@@ -197,7 +207,7 @@ h2{
     color: var(--darkgrey);
     font-weight: 700;
     margin: 0 0 0 0;
-    font-size: clamp(32px, 4vw + 1rem, 56px);
+    font-size: clamp(32px, 4vw + 1rem, 60px);
 }
 
 .linky{
@@ -235,9 +245,9 @@ a{
     background: transparent;
     background-image: linear-gradient(
       to right,
-      rgba(255, 0, 195, 0.1),
-      rgba(253, 100, 185, 0.7) 4%,
-      rgba(255, 0, 132, 0.3)
+      rgba(255, 142, 197, 0.305),
+      rgba(225, 158, 195, 0.658) 4%,
+      rgba(244, 97, 173, 0.723)
     );
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -399,7 +409,8 @@ header a:hover {
     flex-flow: row;
     justify-content: center;       /* Center the items if they don’t take up the full width */
     align-items: center;  
-    gap: 30px;
+    /*gap: 20px;*/
+    overflow: hidden;
 }
 
 .flex-item-about{
@@ -411,13 +422,13 @@ header a:hover {
  
 
     display:flex;
-    flex: 50%;
+    flex: 40%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     text-decoration: none;
     z-index: 10;
-    margin: 5em 3em auto;
+    margin: 6em 3em auto;
     text-align: left; /* Left align the text */
    
 
@@ -429,9 +440,9 @@ header a:hover {
     max-width: 50%; 
     width: auto;
     margin: 5em 3em auto;
-    
+    flex: 0 3 auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .aboutme-container {
         flex-direction: column; /* Stack items in a column */
         align-items: center;    /* Center the flex items horizontally */

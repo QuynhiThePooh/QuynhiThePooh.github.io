@@ -22,7 +22,8 @@ document.body.onmousemove = function(e) {
 
 
 
-const griditem = document.querySelectorAll('.grid-item');
+const griditem = document.querySelectorAll('#mywork .grid-item');
+const a = document.querySelectorAll('a');
 const cursor = document.querySelector('.cursor');
 
 griditem.forEach(link => {
@@ -32,6 +33,16 @@ griditem.forEach(link => {
     
     link.addEventListener('mouseleave', () => {
         cursor.classList.remove('gridhovered');
+    });
+});
+
+a.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        cursor.classList.add('linkhovered');
+    });
+    
+    link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('linkhovered');
     });
 });
 
