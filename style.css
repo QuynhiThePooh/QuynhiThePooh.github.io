@@ -279,6 +279,24 @@ header.active{
 header a:hover {
     text-decoration: underline;
 } 
+#gradient-circle-section {
+    position: relative; /* Key: Make the section a containing block for the absolute circle */
+
+}
+#gradient-circle-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the circle */
+    width: auto;
+    height: 160%; /* The circle's height will match the section height */
+    aspect-ratio: 1/1; /* Ensures the element stays a perfect circle */
+    background: linear-gradient(180deg, #FF97DC 30%, #73BCA6 70%); /* Linear gradient */
+    border-radius: 50%; /* Makes it a circle */
+    z-index: -1; /* Places the circle behind the content */
+    opacity: 0.7; /* Optional: Adjust transparency */
+}
 
 /*
 #name {
@@ -320,36 +338,6 @@ header a:hover {
     color: black;
 }
 
-
-/* UNUSED GRADIENT*/
-.gradient{
-    position: relative;
-    /*background-color: white;*/
-}
-
-.gradient::before{
-        content: "Hello";
-        position: absolute;
-        background: linear-gradient(90deg, var(--adelina), var(--timetable) );
-        border-radius: 50%;
-        filter: blur(70px);
-        left: 10%;
-        top: 10%;
-        width: 20%;
-        height: 60%;
-    }
-
-    .gradient::after{
-        content: "Hello";
-        position: absolute;
-        background: linear-gradient(90deg, var(--tourgether), var(--moviematch) );
-        border-radius: 50%;
-        filter: blur(70px);
-        right: 10%;
-        bottom: 10%;
-        width: 20%;
-        height: 60%;
-    }    
 
 
 /* WORK STUFF*/
@@ -551,8 +539,28 @@ footer{
 
 }
 
+#footergradient{
+    position: relative;
+    overflow: hidden;
+}
+
+#footergradient::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Position at the bottom of the footer */
+    left: 50%; /* Start from the middle of the footer */
+    transform: translateX(-50%); /* Center the circle horizontally */
+    width: 120vw; /* Make the circle twice as wide as the viewport */
+    height: 30vw; /* Ensures the element stays a perfect circle */
+    background: linear-gradient(180deg, var(--pink) 30%, #73BCA6 70%); /* Linear gradient */
+    border-radius: 50%; /* Makes it a circle */
+    z-index: -1; /* Places the circle behind the content */
+    opacity: 0.7; /* Optional: Adjust transparency */
+}
+
 .mini{
     font-size: 0.75rem;
+    font-family: "Be Vietnam Pro",'Work Sans';
 }
 
 /* CONTACT ME STUFF*/
@@ -620,6 +628,7 @@ footer{
     justify-content: center;
     height: auto;
     padding: 50px;
+    margin-top: -60px; 
 }
 
 .textcenter{
@@ -722,18 +731,35 @@ footer{
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, #FFC683 0%, #f162c9  51%, #FFC683  100%);
-    margin: 10px;
-    padding: 15px 45px;
+    margin: -60px;
+    padding: 50px 60px;
     text-align: center;
     transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-    box-shadow: 0 0 20px #eee;
+    background-size: 100% auto;
+          
     border-radius: 5px;
-    /*display: block; */
-    font-family: "Be Vietnam Pro","Work Sans" ,"Avenir";
-    font-size: 2em;
+    /*display: block;    color: white;   */
+
+  }
+  .email-img{
+    width: 100%;                  /* Let the image fill the button's width */
+    max-width: 100px;              /* Limit the maximum size of the image */
+    height: auto; 
+  }  
+  @keyframes shake {
+    0%   { transform: translate(0px, 0px) rotate(0deg); } /* Start at ground */
+  25%  { transform: translate(-10px, -20px) rotate(-15deg); } /* Lift from left corner */
+  50%  { transform: translate(0px, 0px) rotate(0deg); } /* Land back on ground */
+  75%  { transform: translate(10px, -20px) rotate(15deg); } /* Lift from right corner */
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+  }
+  
+ 
+  .email-img:hover {
+    transform: scale(1.05);
+    animation: shake 1.5s ease-in-out; /* Animation lasts for 0.5 seconds */
+
+    animation-iteration-count: infinite;
   }
 
   .btn-filled-ade {
@@ -768,11 +794,7 @@ footer{
     font-size: 20px;
   }
 
-  .btn-grad:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-  }
+
 
 .btncontainer{
     position:relative;
