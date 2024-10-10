@@ -463,6 +463,13 @@ header a:hover {
     padding: 1em 5% 10% 5%;
     
 }
+
+.aboutmephoto{
+    max-height: 30vh;
+    height: 100%;
+    width: auto;
+}
+
 /*padding: 1em 10em 2em 10em;*/
 .photo::before {
     content: '';
@@ -567,6 +574,7 @@ header a:hover {
 #bee{
     background-color: var(--beeraucrat);
 }
+
 
 
 
