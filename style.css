@@ -609,15 +609,7 @@ footer {
 
 /* SHOWCASE STUFF*/
 
-.showcasepics {
-  width: auto;
-  max-width: 900px;
-  max-height: 550px;
-  min-width: 0;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  object-fit: contain;
-}
+
 
 .twopics {
   display: flex;
@@ -643,16 +635,38 @@ footer {
 
 /*this is the flex container for the entire page*/
 .showcase {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 950px; /* omg max width not width so it responsive*/
-  min-width: 0; /* do this so it can shrink*/
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 950px;
+    min-width: 0;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .showcase-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center; /* Center the text under each image */
+  }
+  
+  .showcasepics {
+    max-width: 900px;
+    max-height: 550px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .showcase-caption {
+    margin-top: 10px; /* Adds some spacing between the image and the caption */
+    font-size: 16px;
+    color: var(--darkgrey); /* You can adjust color and font size */
+    font-family: "Be Vietnam Pro", "Work Sans";
+  }
 /*this is the flex container colorful container up top*/
 .showcaseDescription {
   display: flex;
