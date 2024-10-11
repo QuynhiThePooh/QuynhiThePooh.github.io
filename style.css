@@ -1,35 +1,32 @@
-
-@media (min-width:1015px){
-    
+@media (min-width: 1015px) {
 }
 
 .cursor {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: var(--pink);
-    border-radius: 50%;
-    top: var(--y, 0);
-    left: var(--x, 0);
-    transform: translate(-50%, -50%);
-    z-index: 99;
-    opacity: 0.6; 
-    transition: transform .2s;
-    pointer-events: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--pink);
+  border-radius: 50%;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  opacity: 0.6;
+  transition: transform 0.2s;
+  pointer-events: none;
 }
 
 .cursor.gridhovered {
-    transform: translate(-50%, -50%) scale(3);
-    opacity: 1;
-    
-    background-image: url(/pictures/CursorIcon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  transform: translate(-50%, -50%) scale(3);
+  opacity: 1;
+
+  background-image: url(/pictures/CursorIcon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .cursor.linkhovered {
-    transform: translate(-50%, -50%) scale(3);
-    
+  transform: translate(-50%, -50%) scale(3);
 }
 
 /* mix-blend-mode: difference;
@@ -56,7 +53,7 @@ mix-blend-mode: difference;
         background: linear-gradient(90deg, #ff8dfdc7, #73bc73d3);
         animation: spin 10s linear infinite;
 }
-*/  
+*/
 /*nav{
     display: grid;
     grid-template-columns: 200px 1fr 100px 100px 100px;
@@ -70,155 +67,153 @@ mix-blend-mode: difference;
     transition: all 0.25s;
 }
 */
-nav{
-    height: 60px;
-    
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+nav {
+  height: 60px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.links-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--black);
+}
+nav a:hover {
+}
+nav .home-link {
+  margin-right: auto;
+}
+nav svg {
+  fill: var(--black);
+}
+#sidebar-active {
+  display: none;
+}
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 99;
+    width: 100%;
+
+    background-color: var(--pink);
+
+    transition: 0.75s ease-out;
   }
-  .links-container{
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: center;
+    font-weight: 500;
+  }
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay {
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
   }
-  nav a{
-    height: 100%;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--black);
-  }
-  nav a:hover{
-
-  }
-  nav .home-link{
-    margin-right: auto;
-  }
-  nav svg{
-    fill: var(--black);
-  }
-  #sidebar-active{
-    display: none;
-  }
-  .open-sidebar-button, .close-sidebar-button{
-    display: none;
-  }
-
-@media(max-width: 500px){
-    .links-container{
-      flex-direction: column;
-      align-items: flex-start;
-  
-      position: fixed;
-      top: 0;
-      right: -100%;
-      z-index: 99;
-      width: 100%;
-  
-      background-color: var(--pink);
-
-      transition: 0.75s ease-out;
-    }
-    nav a{
-      box-sizing: border-box;
-      height: auto;
-      width: 100%;
-      padding: 20px 30px;
-      justify-content: center;
-      font-weight: 500;
-    }
-    .open-sidebar-button, .close-sidebar-button{
-      padding: 20px;
-      display: block;
-    }
-    #sidebar-active:checked ~ .links-container{
-      right: 0;
-    }
-    #sidebar-active:checked ~ #overlay{
-      height: 100%;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 9;
-    }
 }
 /* GENERAL VIBE*/
 
 :root {
-        --purple: #E6DBF0;
-        --white: #ffffff;
-        --adelina: #74c29b;
-        --timetable: #8ec7e1; 
-        --tourgether: #facf79;
-        --moviematch: #ffc0a3;
-        --beeraucrat: #b9b9b2;
-        --darkgrey: #1e1e1e;
-        --pink:#FFBCCE; 
-        --turquoise: #6CDDC3;
-        --black: rgb(32, 32, 32)
-
-         
+  --purple: #e6dbf0;
+  --white: #ffffff;
+  --adelina: #74c29b;
+  --timetable: #8ec7e1;
+  --tourgether: #facf79;
+  --moviematch: #ffc0a3;
+  --beeraucrat: #b9b9b2;
+  --darkgrey: #1e1e1e;
+  --pink: #ffbcce;
+  --turquoise: #6cddc3;
+  --black: rgb(32, 32, 32);
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    margin: 0 auto;
-    flex-direction: column;
-    cursor: none;
-    background-color: #fffdfa;
-  
+  display: flex;
+  min-height: 100vh;
+  margin: 0 auto;
+  flex-direction: column;
+  cursor: none;
+  background-color: #fffdfa;
 }
-   
+
 main {
-    min-height: 5em;
-    flex: 1;
+  min-height: 5em;
+  flex: 1;
 }
-p, li{
-    font-family: "Be Vietnam Pro","Work Sans" ,"Avenir";
-    font-size: 1.20rem;
-    line-height: 150%;
-    color: #3a3a3a;
-}
-
-ul{
-    line-height: 150%;
+p,
+li {
+  font-family: "Be Vietnam Pro", "Work Sans", "Avenir";
+  font-size: 1.2rem;
+  line-height: 150%;
+  color: #3a3a3a;
 }
 
-h4{
-    font-family: "Be Vietnam Pro", "Work Sans" ,"Avenir";
-    font-size: 1.5rem;
-    font-weight: 500;
+ul {
+  line-height: 150%;
 }
 
-h3{
-    font-family: "Be Vietnam Pro", "Work Sans" ,"Avenir";
-    font-size: 1.75rem;
-    font-weight: 500;
-
+h4 {
+  font-family: "Be Vietnam Pro", "Work Sans", "Avenir";
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
-h2{
-    font-family: "Be Vietnam Pro", "Work Sans" ,"Avenir";
-    color: var(--darkgrey);
-    font-weight: 700;
-    margin: 0 0 0 0;
-    font-size: clamp(32px, 4vw + 1rem, 60px);
+h3 {
+  font-family: "Be Vietnam Pro", "Work Sans", "Avenir";
+  font-size: 1.75rem;
+  font-weight: 500;
 }
 
-.linky{
-    text-decoration: none;
-    color: black;
-    font-family:  "Be Vietnam Pro", "Work Sans" , "Avenir";
+h2 {
+  font-family: "Be Vietnam Pro", "Work Sans", "Avenir";
+  color: var(--darkgrey);
+  font-weight: 700;
+  margin: 0 0 0 0;
+  font-size: clamp(32px, 4vw + 1rem, 60px);
 }
 
-.serif{
-    font-family: "Charter",'Work Sans';
+.linky {
+  text-decoration: none;
+  color: black;
+  font-family: "Be Vietnam Pro", "Work Sans", "Avenir";
+}
+
+.serif {
+  font-family: "Charter", "Work Sans";
 }
 
 /*
@@ -226,105 +221,104 @@ strong{
     font-family: "Work Sans" ,"Avenir";
 }
 */
-.big{
-    font-size: 50px;
+.big {
+  font-size: 50px;
 }
 
-.mid{
-    font-size: 40px;
+.mid {
+  font-size: 40px;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .mark {
-    margin: 0 -0.4em;
-    padding: 0.1em 0.4em;
-    border-radius: 0.8em 0.3em;
-    background: transparent;
-    background-image: linear-gradient(
-      to right,
-      rgba(255, 144, 172, 0.624),
-      rgba(255, 184, 223, 0.615) 4%,
-      rgba(255, 156, 207, 0.54)
-    );
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 144, 172, 0.624),
+    rgba(255, 184, 223, 0.615) 4%,
+    rgba(255, 156, 207, 0.54)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
-.slideUp{
-    transform: translateY(100%); /* Initially positioned below */
-    animation: slideUp 1s ease-out forwards;
+.slideUp {
+  transform: translateY(100%); /* Initially positioned below */
+  animation: slideUp 1s ease-out forwards;
 }
 
 @keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(100%); /* Off-screen (below) */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Final position */
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(100%); /* Off-screen (below) */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
 }
 
-body{
-    position: relative;
-    top: 0px;
-    margin: 0px;
- /* Add a top margin to avoid content overlay */
-
+body {
+  position: relative;
+  top: 0px;
+  margin: 0px;
+  /* Add a top margin to avoid content overlay */
 }
 
 /* HEADER STUFF*/
 
-header{
-    position: sticky;
-    top: 0;
-    z-index: 99;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 
-header.active{
-    background-color: var(--white);
-    z-index: 99;
-    transition: all 0.25s;
-
+header.active {
+  background-color: var(--white);
+  z-index: 99;
+  transition: all 0.25s;
 }
 
 header a:hover {
-    text-decoration: underline;
-} 
+  text-decoration: underline;
+}
 #gradient-circle-section {
-    position: relative; /* Key: Make the section a containing block for the absolute circle */
-
+  position: relative; /* Key: Make the section a containing block for the absolute circle */
 }
 #gradient-circle-section::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the circle */
-    width: auto;
-    height: 160%; /* The circle's height will match the section height */
-    aspect-ratio: 1/1; /* Ensures the element stays a perfect circle */
-    background: linear-gradient(180deg, #FFD3DF 30%, #6efad0 70%); /* Linear gradient */
-    border-radius: 50%; /* Makes it a circle */
-    z-index: -1; /* Places the circle behind the content */
-    opacity: 0.8; /* Optional: Adjust transparency */
-    animation: circleGrow 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the circle */
+  width: auto;
+  height: 160%; /* The circle's height will match the section height */
+  aspect-ratio: 1/1; /* Ensures the element stays a perfect circle */
+  background: linear-gradient(
+    180deg,
+    #ffd3df 30%,
+    #6efad0 70%
+  ); /* Linear gradient */
+  border-radius: 50%; /* Makes it a circle */
+  z-index: -1; /* Places the circle behind the content */
+  opacity: 0.8; /* Optional: Adjust transparency */
+  animation: circleGrow 0.5s ease-in-out;
 }
 @keyframes circleGrow {
-    from {
-        transform: translate(-50%, -50%) scale(0);
-    }
-    to {
-        transform: translate(-50%, -50%) scale(1);
-    }
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
-
-
 
 /*
 #name {
@@ -350,238 +344,216 @@ header a:hover {
 
  LANDING STUFF*/
 
-#landing{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 500px;
-    z-index: 1;
-   
+#landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 500px;
+  z-index: 1;
 }
 
-.landingHeadLine{
-    margin: 30px 30px 30px 30px;
-    color: black;
+.landingHeadLine {
+  margin: 30px 30px 30px 30px;
+  color: black;
 }
-
-
 
 /* WORK STUFF*/
 
-.section{
-    width: 1280px;
-    max-width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    margin: 140px auto 0;
-    padding: 40px;
+.section {
+  width: 1280px;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 140px auto 0;
+  padding: 40px;
 }
 
-.section-header{
-    font-family: "Be Vietnam Pro","Work Sans";
-    font-size: clamp(64px, 6vw + 1rem, 100px);
-    margin: 0px;
-    color: var (--darkgrey);
-    flex: 1 100%;
+.section-header {
+  font-family: "Be Vietnam Pro", "Work Sans";
+  font-size: clamp(64px, 6vw + 1rem, 100px);
+  margin: 0px;
+  color: var (--darkgrey);
+  flex: 1 100%;
 }
 
-
-.grid-container{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;       /* Center the items if they don’t take up the full width */
-    align-items: center;  
-    gap: 30px;
+.grid-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; /* Center the items if they don’t take up the full width */
+  align-items: center;
+  gap: 30px;
 }
 
+/* this is a nested grid item for my casestudies, meaning the item is also the container for the image-item and the descrip item*/
+.grid-item {
+  padding: 30px 50px 60px;
+  min-height: 33vh;
+  max-height: 600px;
+  min-width: 300px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 
-
- /* this is a nested grid item for my casestudies, meaning the item is also the container for the image-item and the descrip item*/
-.grid-item{
-    padding: 30px 50px 60px;
-    min-height: 33vh;
-    max-height: 600px;
-    min-width: 300px;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    
-    display:flex;
-    flex: 100%;
-    flex-flow: row wrap;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 40px;
-
+  display: flex;
+  flex: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 40px;
 }
 
-
-.aboutme-container{
-    
-    display: flex;
-    flex-flow: row;
-    justify-content: center;       /* Center the items if they don’t take up the full width */
-    align-items: center;  
-    /*gap: 20px;*/
-    overflow: hidden;
+.aboutme-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center; /* Center the items if they don’t take up the full width */
+  align-items: center;
+  /*gap: 20px;*/
+  overflow: hidden;
 }
 
-.flex-item-about{
-    max-height: 500px;
-    min-width: 380px;
-    min-height: 450px;
-    box-sizing: border-box;
-    position: relative;
- 
+/* ABOUT-ME PHOTO WITH CIRCLE */
 
-    display:flex;
-    flex: 40%;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    z-index: 10;
-    margin: 10% 3em auto;
-    padding: 5% 5em 1em 5em;
-    text-align: left; /* Left align the text */
-   
-
+/* to change general size of image/circle combination, */
+/* change max-w and max-h here */
+/* see media query below for an example */
+/* keep them equivalent */
+#about-me-photo-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 800px;
+  height: auto;
+  max-width: 800px;
+  max-height: 800px;
+  margin: auto 32px;
 }
 
-.photo{
-    object-fit: contain;  
-    max-height: 60%; 
-    max-width: 50%; 
-    width: auto;
-    margin: 5em 3em auto;
-    flex: 0 1 auto;
-    position: relative;
-    padding: 1em 5% 10% 5%;
-    
+#about-me-photo-circle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffd3df 30%, #6efad0 70%);
+  z-index: 1;
 }
 
-.aboutmephoto{
-    max-height: 30vh;
-    height: 100%;
-    width: auto;
+#about-me-photo-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/*padding: 1em 10em 2em 10em;*/
-.photo::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the circle */
-    width: auto;
-    height: 80%; /* The circle's height will match the section height */
-    aspect-ratio: 1/1; /* Ensures the element stays a perfect circle */
-    background: linear-gradient(180deg, #FFD3DF 30%, #6efad0 70%); /* Linear gradient */
-    border-radius: 50%; /* Makes it a circle */
-    z-index: -1; /* Places the circle behind the content */
-    opacity: 0.8; /* Optional: Adjust transparency */
-    animation: circleGrow 0.5s ease-in-out;
+/* to change image size relative to circle, adapt the max-w and max-h here */
+/* keep them equivalent */
+#about-me-photo-container img {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
 }
+
+/* END */
 
 @media (max-width: 900px) {
-    .aboutme-container {
-        flex-direction: column; /* Stack items in a column */
-        align-items: center;    /* Center the flex items horizontally */
-    }
+  .aboutme-container {
+    flex-direction: column; /* Stack items in a column */
+    align-items: center; /* Center the flex items horizontally */
+  }
 
-    .flex-item-about {
-        /*text-align: center;  Center the text block horizontally */
-        margin-left: 2em;
-    }
-    .photo{
-        margin: 0em ;
-        
-    }
+
+  .flex-item-about {
+    /*text-align: center;  Center the text block horizontally */
+    margin-left: 2em;
+  }
+
+  #about-me-photo-wrapper {
+    max-height: 300px;
+    max-width: 300px;
+  }
+
 }
-@media (max-width: 320px) {
 
-    .flex-item-about {
-        min-width: 220px;
-    }
+
+@media (max-width: 320px) {
+  .flex-item-about {
+    min-width: 220px;
+  }
 }
 
 .thumbnail {
-    flex: 1 1 200px;
-    height: auto;
-    object-fit: contain;
-    width: 50%;
-    max-height: 500px;
-    z-index: 0;
+  flex: 1 1 200px;
+  height: auto;
+  object-fit: contain;
+  width: 50%;
+  max-height: 500px;
+  z-index: 0;
 }
 
 /* one of the flex items, also flex container for text it holds*/
 .project-intro-item {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: auto;
-    color: var(--darkgrey);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: auto;
+  color: var(--darkgrey);
 
-    display: flex;
-    
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
+  display: flex;
 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
 }
 
-.imgTitle{
-    font-size: clamp(2rem, 3.636vw + 1.273rem, 4rem);
-    font-weight: 600;
-    font-family: "Be Vietnam Pro",'Charter';
-    letter-spacing: 0.001em;
-    margin-bottom: -0.5rem;
-    
+.imgTitle {
+  font-size: clamp(2rem, 3.636vw + 1.273rem, 4rem);
+  font-weight: 600;
+  font-family: "Be Vietnam Pro", "Charter";
+  letter-spacing: 0.001em;
+  margin-bottom: -0.5rem;
 }
 
-.imgDescrip{
-    font-size: clamp(0.75rem, 1.364vw + 0.477rem, 1.5rem);
-    font-weight: 400;
+.imgDescrip {
+  font-size: clamp(0.75rem, 1.364vw + 0.477rem, 1.5rem);
+  font-weight: 400;
 }
 
 .imgRole {
-    font-size: clamp(0.75rem, 0.909vw + 0.568rem, 1.25rem);
-    font-weight: 400;
-    font-family: "Be Vietnam Pro",'Work Sans';
-    letter-spacing: 0.001em;
-
+  font-size: clamp(0.75rem, 0.909vw + 0.568rem, 1.25rem);
+  font-weight: 400;
+  font-family: "Be Vietnam Pro", "Work Sans";
+  letter-spacing: 0.001em;
 }
 
-
-#adelina{
-    background-color: var(--adelina);
+#adelina {
+  background-color: var(--adelina);
 }
-#calendar{
-    background-color: var(--timetable);
+#calendar {
+  background-color: var(--timetable);
 }
-#tour{
-    background-color: var(--tourgether);
+#tour {
+  background-color: var(--tourgether);
 }
-#moviematch{
-    background-color: var(--moviematch);
+#moviematch {
+  background-color: var(--moviematch);
 }
-#bee{
-    background-color: var(--beeraucrat);
+#bee {
+  background-color: var(--beeraucrat);
 }
-
-
-
 
 /* FOOTER STUFF*/
 
-footer{
-    /*position: fixed;
+footer {
+  /*position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -589,277 +561,279 @@ footer{
     text-align: center;
     */
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 5px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
 }
 
-#footergradient{
-    position: relative;
-    overflow: hidden;
+#footergradient {
+  position: relative;
+  overflow: hidden;
 }
 
 #footergradient::before {
-    content: '';
-    position: absolute;
-    top: 0; /* Position at the bottom of the footer */
-    left: 50%; /* Start from the middle of the footer */
-    transform: translateX(-50%); /* Center the circle horizontally */
-    width: 120vw; /* Make the circle twice as wide as the viewport */
-    height: 30vw; /* Ensures the element stays a perfect circle */
-    background: linear-gradient(180deg, var(--pink) 30%, #73BCA6 70%); /* Linear gradient */
-    border-radius: 50%; /* Makes it a circle */
-    z-index: -1; /* Places the circle behind the content */
-    opacity: 0.7; /* Optional: Adjust transparency */
-    
+  content: "";
+  position: absolute;
+  top: 0; /* Position at the bottom of the footer */
+  left: 50%; /* Start from the middle of the footer */
+  transform: translateX(-50%); /* Center the circle horizontally */
+  width: 120vw; /* Make the circle twice as wide as the viewport */
+  height: 30vw; /* Ensures the element stays a perfect circle */
+  background: linear-gradient(
+    180deg,
+    var(--pink) 30%,
+    #73bca6 70%
+  ); /* Linear gradient */
+  border-radius: 50%; /* Makes it a circle */
+  z-index: -1; /* Places the circle behind the content */
+  opacity: 0.7; /* Optional: Adjust transparency */
 }
 
-
-
-.mini{
-    font-size: 0.75rem;
-    font-family: "Be Vietnam Pro",'Work Sans';
+.mini {
+  font-size: 0.75rem;
+  font-family: "Be Vietnam Pro", "Work Sans";
 }
 
 /* CONTACT ME STUFF*/
 
-#contactme{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 500px;
-    padding-bottom: 100px;
-    text-align: center;
+#contactme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  padding-bottom: 100px;
+  text-align: center;
 }
 
 /* SHOWCASE STUFF*/
 
-.showcasepics{
-    width: auto;
-    max-width: 900px;
-    max-height: 550px;
-    min-width: 0;
-    margin-top: 40px;
-    margin-bottom: 40px; 
-    object-fit: contain;
-
+.showcasepics {
+  width: auto;
+  max-width: 900px;
+  max-height: 550px;
+  min-width: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  object-fit: contain;
 }
 
-.twopics{
-    display :flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
+.twopics {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
 }
 
-.twotexts{
-    display :flex;
-    flex-direction: row wrap;
-    gap: 50px;
-    justify-content: center;
+.twotexts {
+  display: flex;
+  flex-direction: row wrap;
+  gap: 50px;
+  justify-content: center;
 }
 
-.next{
-    display :flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+.next {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 /*this is the flex container for the entire page*/
-.showcase{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 950px; /* omg max width not width so it responsive*/
-    min-width: 0; /* do this so it can shrink*/
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-
+.showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 950px; /* omg max width not width so it responsive*/
+  min-width: 0; /* do this so it can shrink*/
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /*this is the flex container colorful container up top*/
-.showcaseDescription{
-    display: flex;
-    justify-content: center;
-    height: auto;
-    padding: 50px;
-    margin-top: -60px; 
+.showcaseDescription {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  padding: 50px;
+  margin-top: -60px;
 }
 
-.textcenter{
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    align-self: center;
-    justify-content: center;
-    margin-left: 5em;
-    margin-right: 5em;
+.textcenter {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  align-self: center;
+  justify-content: center;
+  margin-left: 5em;
+  margin-right: 5em;
 }
 
 /*ELEMENTS OF THE SHOWCASE*/
 
-.quote{
-    font-size: 1.5rem;
-    font-style: italic;
-    text-align: center;
-    align-self: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .headline {
-    position: relative;
-    margin-top: 50px;
-    /*margin-left: 2em;  Space for the icon */
+  position: relative;
+  margin-top: 50px;
+  /*margin-left: 2em;  Space for the icon */
 }
 
 .icon {
-    position: absolute;
-    left: -2em; /* Move the icon to the left */
-    top: 0;
-    width: 1.5em; /* Adjust the size */
-    height: 1.5em;
-    background: url('/pictures/stern.png') no-repeat;
-    background-size: contain;
+  position: absolute;
+  left: -2em; /* Move the icon to the left */
+  top: 0;
+  width: 1.5em; /* Adjust the size */
+  height: 1.5em;
+  background: url("/pictures/stern.png") no-repeat;
+  background-size: contain;
 }
 
+.boxed {
+  border: 2px solid #ffd676;
+  padding: 20px; /* Add padding to the inside of the border */
+  margin: 0px; /* Add margin to the outside of the border */
+  background-color: #fffefb; /* Fill color of the box */
+  border-radius: 15px;
+}
 
-.boxed{
-    border: 2px solid #ffd676;
-    padding: 20px; /* Add padding to the inside of the border */
-    margin: 0px; /* Add margin to the outside of the border */
-    background-color: #fffefb; /* Fill color of the box */
-    border-radius: 15px; 
-  }
-
-.btnNext{
-    padding: 20px;
-    max-height: 150px;
-    max-width: 300px;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
+.btnNext {
+  padding: 20px;
+  max-height: 150px;
+  max-width: 300px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
 }
 
 /*BUTTON STUFF*/
 
-.btn-1{
-    text-decoration: none;
-    color:black;
-    font-size: 2em;
-    padding: 20px 50px;
-    margin: 32px;    
+.btn-1 {
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  padding: 20px 50px;
+  margin: 32px;
 }
 
-.btn-2{
-    text-decoration: none;
-    color:black;
-    padding: 45px 15px 5px 15px ;
-    margin: 60px;    
+.btn-2 {
+  text-decoration: none;
+  color: black;
+  padding: 45px 15px 5px 15px;
+  margin: 60px;
 }
 
-.btn::after, .btn::before{
-    border: 2px solid #000;
-    content: "";
-    position: absolute;
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
-    z-index: 0;
-    left:0;
-    bottom: 0;
-    transition: transform 0.3s ease;
+.btn::after,
+.btn::before {
+  border: 2px solid #000;
+  content: "";
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  transition: transform 0.3s ease;
 }
 
-
-.btn:hover::before{
-    transform: translate(-5px, -5px)
+.btn:hover::before {
+  transform: translate(-5px, -5px);
 }
 
-.btn:hover::after{
-    transform: translate(5px, 5px)
+.btn:hover::after {
+  transform: translate(5px, 5px);
 }
 
 .btn-grad {
-    margin: -60px;
-    padding: 50px 60px;
-    text-align: center;
-    transition: 0.5s;
-    background-size: 100% auto;
-          
-    border-radius: 5px;
-    /*display: block;    color: white;   */
+  margin: -60px;
+  padding: 50px 60px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 100% auto;
 
+  border-radius: 5px;
+  /*display: block;    color: white;   */
+}
+.email-img {
+  width: 100%; /* Let the image fill the button's width */
+  max-width: 100px; /* Limit the maximum size of the image */
+  height: auto;
+}
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  } /* Start at ground */
+  25% {
+    transform: translate(-10px, -20px) rotate(-15deg);
+  } /* Lift from left corner */
+  50% {
+    transform: translate(0px, 0px) rotate(0deg);
+  } /* Land back on ground */
+  75% {
+    transform: translate(10px, -20px) rotate(15deg);
+  } /* Lift from right corner */
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
   }
-  .email-img{
-    width: 100%;                  /* Let the image fill the button's width */
-    max-width: 100px;              /* Limit the maximum size of the image */
-    height: auto; 
-  }  
-  @keyframes shake {
-    0%   { transform: translate(0px, 0px) rotate(0deg); } /* Start at ground */
-  25%  { transform: translate(-10px, -20px) rotate(-15deg); } /* Lift from left corner */
-  50%  { transform: translate(0px, 0px) rotate(0deg); } /* Land back on ground */
-  75%  { transform: translate(10px, -20px) rotate(15deg); } /* Lift from right corner */
-  100% { transform: translate(0px, 0px) rotate(0deg); }
-  }
-  
- 
-  .email-img:hover {
-    transform: scale(1.05);
-    animation: shake 1.5s ease-in-out; /* Animation lasts for 0.5 seconds */
+}
 
-    animation-iteration-count: infinite;
-  }
+.email-img:hover {
+  transform: scale(1.05);
+  animation: shake 1.5s ease-in-out; /* Animation lasts for 0.5 seconds */
 
-  .btn-filled-ade {
-    background-color: var(--adelina);
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    transition: 0.5s;
-    color: #004824;  
+  animation-iteration-count: infinite;
+}
 
-    justify-self: center;         
- 
-    border-radius: 5px;
-    display: block; 
-    font-family: "Be Vietnam Pro","Work Sans" ,"Avenir";
-    font-size: 20px;
-  }
+.btn-filled-ade {
+  background-color: var(--adelina);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  transition: 0.5s;
+  color: #004824;
 
-  .btn-filled-tour {
-    background-color: var(--tourgether);
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    transition: 0.5s;
-    color: #624100;  
+  justify-self: center;
 
-    justify-self: center;         
- 
-    border-radius: 5px;
-    display: block; 
-    font-family: "Be Vietnam Pro","Work Sans" ,"Avenir";
-    font-size: 20px;
-  }
+  border-radius: 5px;
+  display: block;
+  font-family: "Be Vietnam Pro", "Work Sans", "Avenir";
+  font-size: 20px;
+}
 
+.btn-filled-tour {
+  background-color: var(--tourgether);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  transition: 0.5s;
+  color: #624100;
 
+  justify-self: center;
 
-.btncontainer{
-    position:relative;
-    padding: 20px 50px;
-    margin: 32px;
-     
+  border-radius: 5px;
+  display: block;
+  font-family: "Be Vietnam Pro", "Work Sans", "Avenir";
+  font-size: 20px;
+}
+
+.btncontainer {
+  position: relative;
+  padding: 20px 50px;
+  margin: 32px;
 }
