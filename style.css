@@ -173,7 +173,9 @@ body {
 main {
   min-height: 5em;
   flex: 1;
+  overflow-x: hidden;
 }
+
 p,
 li {
   font-family: "Be Vietnam Pro", "Work Sans", "Avenir";
@@ -235,7 +237,7 @@ a {
 }
 
 .mark {
-  margin: 0 -0.4em;
+  margin: 0 -0.3em;
   padding: 0.1em 0.4em;
   border-radius: 0.8em 0.3em;
   background: transparent;
@@ -490,9 +492,38 @@ header a:hover {
 
 
 @media (max-width: 320px) {
-  .flex-item-about {
-    min-width: 220px;
-  }
+    body .cursor {
+        display: 'none'
+    }
+
+    p, li{
+        font-size: 1rem;
+    }
+
+    .flex-item-about {
+        min-width: 220px;
+    }
+
+    .quote{
+        font-size: 1rem;
+    }
+    .showcase{
+        max-width: 100%;
+    }
+
+    .textcenter{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .icon{
+        display: none;
+    }
+
+    .showcaseDescription .grid-item{
+        padding: 10% 10% 10%;
+    }
+
 }
 
 .thumbnail {
@@ -572,7 +603,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 5px;
+  padding: 0px;
 }
 
 #footergradient {
@@ -627,7 +658,8 @@ footer {
 
 .twotexts {
   display: flex;
-  flex-direction: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
 }
@@ -666,6 +698,7 @@ footer {
     max-height: 550px;
     width: auto;
     object-fit: contain;
+    padding: 5% 0%
   }
   
   .showcase-caption {
@@ -723,7 +756,7 @@ footer {
 .boxed {
   border: 2px solid #ffd676;
   padding: 20px; /* Add padding to the inside of the border */
-  margin: 0px; /* Add margin to the outside of the border */
+  margin: 0px 0px 20px 0px; /* Add margin to the outside of the border */
   background-color: #fffefb; /* Fill color of the box */
   border-radius: 15px;
 }
