@@ -415,7 +415,7 @@ header a:hover {
   align-items: center;
   /*gap: 20px;*/
   overflow: hidden;
-  margin: 32px auto;
+  margin: 32px 5%;
 }
 
 /* ABOUT-ME PHOTO WITH CIRCLE */
@@ -432,6 +432,8 @@ header a:hover {
   max-width: 700px;
   max-height: 700px;
   margin: auto 32px;
+  flex-shrink: 0.8;
+  
 }
 
 #about-me-photo-circle-background {
@@ -443,6 +445,9 @@ header a:hover {
   border-radius: 50%;
   background: linear-gradient(180deg, #ffd3df 30%, #6efad0 70%);
   z-index: 1;
+  transform:  scale(0);
+  animation: circleGrowAbout 0.7s ease-out forwards;
+  animation-delay: 200ms;
 }
 
 #about-me-photo-container {
@@ -453,6 +458,16 @@ header a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes circleGrowAbout {
+  from {
+    transform:  scale(0);
+  }
+  to {
+    transform:  scale(1);
+  }
 }
 
 /* to change image size relative to circle, adapt the max-w and max-h here */
@@ -497,7 +512,7 @@ header a:hover {
     }
 
     p, li{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .flex-item-about {
@@ -514,6 +529,10 @@ header a:hover {
     .textcenter{
         margin-left: 10%;
         margin-right: 10%;
+    }
+
+    .twotexts{
+      flex-wrap: wrap;
     }
 
     .icon{
@@ -659,7 +678,7 @@ footer {
 .twotexts {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  
   gap: 50px;
   justify-content: center;
 }
