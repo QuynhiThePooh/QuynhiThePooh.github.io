@@ -755,7 +755,7 @@ footer {
 
 .boxed {
   border: 2px solid #ffd676;
-  padding: 20px; /* Add padding to the inside of the border */
+  padding: 5%; /* Add padding to the inside of the border */
   margin: 0px 0px 20px 0px; /* Add margin to the outside of the border */
   background-color: #fffefb; /* Fill color of the box */
   border-radius: 15px;
