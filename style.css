@@ -447,7 +447,7 @@ header a:hover {
   z-index: 1;
   transform:  scale(0);
   animation: circleGrowAbout 0.7s ease-out forwards;
-  animation-delay: 200ms;
+  animation-delay: 300ms;
 }
 
 #about-me-photo-container {
@@ -508,7 +508,7 @@ header a:hover {
 
 @media (max-width: 320px) {
     body .cursor {
-        display: 'none'
+        display: none;
     }
 
     p, li{
@@ -541,6 +541,9 @@ header a:hover {
 
     .showcaseDescription .grid-item{
         padding: 10% 10% 10%;
+    }
+    .footergradient::before {
+      background: var(pink);
     }
 
 }
