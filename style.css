@@ -192,6 +192,12 @@ h4 {
   font-family: "Be Vietnam Pro", "Work Sans", "Avenir";
   font-size: 1.5rem;
   font-weight: 500;
+  margin-top: 2.5em;
+  margin-bottom: 0.5em; 
+}
+
+.boxed h4{
+  margin-top: 0.5em;
 }
 
 h3 {
@@ -507,7 +513,19 @@ header a:hover {
 
 /* MOBILE RESPONSIVE */
 
+#mobile{
+  display: none;
+}
+
 @media (max-width: 400px) {
+    #mobile{
+      display: block;
+    }
+
+    #web{
+      display: none;
+    }
+
     body .cursor {
         display: none;
     }
@@ -540,6 +558,10 @@ header a:hover {
       flex-wrap: wrap;
     }
 
+    .twopics{
+      flex-wrap: wrap;
+    }
+
     .icon{
         display: none;
     }
@@ -551,9 +573,22 @@ header a:hover {
       background: var(pink);
     }
 
+    .twopics p{
+      margin-top: 50px;
+    }
 
+    .boxed h4{
+      margin-top: 3%;
+    }
+
+    .imgRole{
+      margin-top: -2em;
+      margin-bottom: 2em;
+    }
 
 }
+
+
 
 .thumbnail {
   flex: 1 1 200px;
@@ -768,7 +803,7 @@ footer {
 
 .headline {
   position: relative;
-  margin-top: 50px;
+  margin-top: 70px;
   /*margin-left: 2em;  Space for the icon */
 }
 
