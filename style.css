@@ -532,6 +532,10 @@ header a:hover {
         margin-right: 10%;
     }
 
+    .project-intro-item .textcenter{
+      margin-left: 0;
+      margin-right: 0;
+  }
     .twotexts{
       flex-wrap: wrap;
     }
@@ -546,6 +550,8 @@ header a:hover {
     .footergradient::before {
       background: var(pink);
     }
+
+
 
 }
 
@@ -745,8 +751,8 @@ footer {
   flex: 1 1 auto;
   align-self: center;
   justify-content: center;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-left: 3em;
+  margin-right: 3em;
 }
 
 /*ELEMENTS OF THE SHOWCASE*/
